@@ -1,30 +1,58 @@
-var x = 10;
-var y =5;
+// var x = 10;
+// var y =5;
 
 
-//10 > 5 -- yes
+// //10 > 5 -- yes
 
 
-if(x>y){
-    console.log("This is true");
-}else{
-    console.log("This is wrong");
+// if(x>y){
+//     console.log("This is true");
+// }else{
+//     console.log("This is wrong");
+// }
+
+// if(x<y){
+//     console.log("this is wrong");
+// }else{
+//     console.log("this is true");
+// }
+
+// if(y>x){
+//     console.log("this is true");
+// }else{
+//     console.log("this is wrong");
+// }
+
+// if(x==7){
+//     console.log("10 equals 7");
+// }else{
+//     console.log("10 does not equal 7");
+// }
+
+var input = document.getElementById("input_id");
+var button = document.getElementById("btn_id");
+var text = document.getElementById("text_id");
+
+button.onclick = function(){
+    text.innerHTML = input.value;
 }
 
-if(x<y){
-    console.log("this is wrong");
-}else{
-    console.log("this is true");
+button.onclick = function(){
+    if(input.value > 10){
+        text.innerHTML = "Input value is greater than 10";
+    }
+    else if(input.value < 10){
+        text.innerHTML = "Input value is less than 10";
+    }else{
+        text.innerHTML = "Input is equal to 10";
+    }
 }
 
-if(y>x){
-    console.log("this is true");
-}else{
-    console.log("this is wrong");
-}
+var btn2 = document.getElementById("answer");
+var input1 = document.getElementById("input1_id");
+var input2 = document.getElementById("input2_id");
+var answer = document.getElementById("text1");
 
-if(x==7){
-    console.log("10 equals 7");
-}else{
-    console.log("10 does not equal 7");
-}
+btn2.addEventListener("click", function(){
+    answer.innerHTML = parseInt(input1.value) + parseInt(input2.value);
+})
