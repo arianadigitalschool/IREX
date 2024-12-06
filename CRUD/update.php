@@ -8,7 +8,8 @@
         $username = $_POST['username'];
         $email = $_POST['email']; 
 
-        
+
+
         $sql = "UPDATE users SET name=:name, username=:username, email=:email WHERE id=:id";
     
         $sqlQuery = $connect->prepare($sql);

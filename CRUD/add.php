@@ -8,6 +8,7 @@
         $email = $_POST['email']; 
 
 
+
         $sql = "INSERT INTO users(name, username, email) VALUES (:name, :username, :email)";
     
         $sqlQuery = $connect->prepare($sql);
